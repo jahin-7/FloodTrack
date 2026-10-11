@@ -1,0 +1,20 @@
+# EXAMPLE AOI for a small demonstration region of northern Nepal. Confirm its location before a case-study claim.
+name: trishuli_2026_demo_aoi
+case_event_date: '2026-08-26'
+# lon_min, lat_min, lon_max, lat_max (EPSG:4326); deliberately SMALL for CDSE synchronous Processing API.
+bbox: [85.119, 28.150, 85.157, 28.182]
+osm_snapshot: '2026-08-01'
+lookback_days: 30
+lookforward_days: 25
+scale_m: 30
+radar_drop_db: -2.0
+radar_post_water_db: -15.0
+max_slope_degrees: 12.0
+min_valid_coverage: 0.70
+use_optical: true
+use_dem: true
+ai_model_path: null
+source_mode: real
+# Requires CDSE_CLIENT_ID and CDSE_CLIENT_SECRET (Sentinel Hub OAuth client).
+# Keep secrets in Kaggle Secrets / Colab Secrets, never in the config.
+optical_search_days: 35

@@ -1,0 +1,21 @@
+# QA and validation checklist — CDSE edition
+
+- [ ] `pytest -q tests` passes (offline mocked CDSE + synthetic end-to-end)
+- [ ] CDSE STAC preflight lists S1 pre/post scene IDs and **same relative orbit and pass**
+- [ ] Real GeoTIFF has two bands, georeferencing and valid overlapping data
+- [ ] Provenance includes acquisition timestamps, scene IDs, relative orbit, processing details
+- [ ] CDSE processing credits/quota errors are shown honestly; no prohibited substitute
+- [ ] Optional S2 L2A SCL mask excludes clouds/shadow/snow
+- [ ] Optional DEM slope mask does not silently treat nodata as real slope
+- [ ] Historical OSM snapshot is **strictly pre-event**; no current edits
+- [ ] Flood mask is manually inspected against pre/post radar images, shadow/layover risk noted
+- [ ] Exposure counts are described as *potential*, not verified destruction
+- [ ] Road connectivity includes `unknown` where no credible network anchors exist
+- [ ] No EMSR927/UNOSAT maps are under `data/raw`, `data/osm` or model training inputs
+- [ ] Trained model uses approved labels and held-out independent Himalayan scenes; actual IoU reported
+- [ ] Freeze model/threshold before opening EMSR927 comparison reference
+- [ ] Reference class/extent/date compatibility checked before reporting IoU
+- [ ] Dashboard, one-page report, six-page report and three-minute video complete
+- [ ] ZIP contains source, configs, notebooks, tests, acquired inputs, weights and outputs **if available**
+- [ ] ZIP contains **no** CDSE credentials, OAuth tokens or platform secret files
+- [ ] Test a second unseen small AOI/date and document failure modes

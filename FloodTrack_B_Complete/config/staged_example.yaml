@@ -1,0 +1,14 @@
+# Use the same run name after scripts/download_inputs.py; no API calls on staged reruns.
+# Change 'name' and paths to EXACTLY match the exported data from Colab.
+name: trishuli_2026_demo_aoi
+source_mode: staged
+case_event_date: '2026-08-26'
+bbox: [85.119, 28.150, 85.157, 28.182]
+osm_snapshot: '2026-07-27'
+radar_drop_db: -2.0
+radar_post_water_db: -15.0
+max_slope_degrees: 12
+min_valid_coverage: 0.7
+use_optical: true
+use_dem: true
+ai_model_path: null

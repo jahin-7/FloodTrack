@@ -1,0 +1,22 @@
+name: Syapru_Besi_AOI01
+case_event_date: '2026-08-26'
+bbox:
+- 85.31
+- 28.14
+- 85.36
+- 28.2
+osm_snapshot: '2026-08-01'
+lookback_days: 30
+lookforward_days: 25
+scale_m: 30
+radar_drop_db: -2.0
+radar_post_water_db: -15.0
+max_slope_degrees: 12.0
+min_valid_coverage: 0.7
+use_optical: false
+use_dem: false
+ai_model_path: null
+source_mode: real
+optical_search_days: 35
+include_s2: false
+include_dem: false
